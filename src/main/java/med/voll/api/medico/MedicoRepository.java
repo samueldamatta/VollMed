@@ -1,12 +1,10 @@
 package med.voll.api.medico;
 
 import java.time.LocalDateTime;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 
@@ -36,5 +34,5 @@ public interface MedicoRepository extends JpaRepository<Medico, Long>{
             where
             m.id = :id
             """)
-            Boolean findAtivoById(Long idMedico);
+            Boolean findAtivoById(Long id);
 }
